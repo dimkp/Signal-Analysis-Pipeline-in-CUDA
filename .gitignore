@@ -1,0 +1,15 @@
+*.exe
+*.obj
+*.pdb
+*.ilk
+*.log
+x64/
+Debug/
+Release/
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/c_cpp_properties.json
+*.tmp
+*.cudafe*
+*.ptx
