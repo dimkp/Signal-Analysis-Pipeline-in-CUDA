@@ -143,13 +143,13 @@ int main()
     std::ofstream file_frequency("frequency_filtered_output.txt");
 
     // Taking a sample and storing it in the output files for verification
-    for (int i = 0; i < 1024; i++)
+    for (int i = 0; i < 512; i++)
         file_unfiltered << h_signal[i] << std::endl;
 
-    for (int i = 0; i < 1024; i++)
+    for (int i = 0; i < 512; i++)
         file_filtered << h_filtered_signal[i] << std::endl;
 
-    for (int i = 0; i < 1024 / 2 + 1; i++)
+    for (int i = 0; i < N / 2 + 1; i++)
     {
         float real = h_freq[i].x;
         float imag = h_freq[i].y;
