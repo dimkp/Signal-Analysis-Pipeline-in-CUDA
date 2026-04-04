@@ -5,7 +5,6 @@
 #include <vector>
 #include <ctime>
 #include <fstream>
-#include <filesystem>
 
 #define PI 3.1415926535897932
 #define THREADS_PER_BLOCK 256
@@ -63,7 +62,7 @@ __global__ void FilteringKernel(const float* input, const float* filter, float* 
 
 int main()
 {
-    int N = 100000, K = 16;   // number of samples and filter size
+    int N = 1000000, K = 16;   // number of samples and filter size
     float fs = 1024.0f;    // sampling frequency
     float f = 50.0f;       // signal frequency
 
@@ -143,13 +142,14 @@ int main()
     std::ofstream file_filtered("filtered_output.txt");
     std::ofstream file_frequency("frequency_filtered_output.txt");
 
-    for (int i = 0; i < N; i++)
+    // Taking a sample and storing it in the output files for verification
+    for (int i = 0; i < 1024; i++)
         file_unfiltered << h_signal[i] << std::endl;
 
-    for (int i = 0; i < N; i++)
+    for (int i = 0; i < 1024; i++)
         file_filtered << h_filtered_signal[i] << std::endl;
 
-    for (int i = 0; i < N / 2 + 1; i++)
+    for (int i = 0; i < 1024 / 2 + 1; i++)
     {
         float real = h_freq[i].x;
         float imag = h_freq[i].y;
