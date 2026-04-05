@@ -16,4 +16,5 @@ The CUDA framework was chosen because it provides an easier to understand, more 
 ## Techniques used for optimization of the kernel
 
 i. Shared memory for more efficient utillization of each *block*
+
 ii. Grid Stride loop to prevent overflow of the data 
