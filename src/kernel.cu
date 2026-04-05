@@ -144,10 +144,10 @@ int main()
 
     // Taking a sample and storing it in the output files for verification
     for (int i = 0; i < 512; i++)
-        file_unfiltered << h_signal[i] << std::endl;
+        file_unfiltered << h_signal[i] << "\n";
 
     for (int i = 0; i < 512; i++)
-        file_filtered << h_filtered_signal[i] << std::endl;
+        file_filtered << h_filtered_signal[i] << "\n";
 
     for (int i = 0; i < N / 2 + 1; i++)
     {
@@ -155,7 +155,7 @@ int main()
         float imag = h_freq[i].y;
         float magnitude = sqrt(real * real + imag * imag);
         float freq = i * fs / N;
-        file_frequency << freq << " " << magnitude << std::endl;
+        file_frequency << freq << " " << magnitude << "\n";
     }
 
     file_filtered.close();
