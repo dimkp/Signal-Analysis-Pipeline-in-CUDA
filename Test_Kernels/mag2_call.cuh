@@ -8,4 +8,4 @@ static void cudaErrorCheck(cudaError_t e, const char* msg) {
     }
 }
 
-void compute_mag2(float* h_in, float* h_out, int N);
+void compute_mag2(float2* h_in, float* h_out, int N);
