@@ -13,7 +13,7 @@
 
 The CUDA framework was chosen because it provides an easier to understand, more robust and stable way to parallelize existing code and improve performance. There are also a lot of available resources to help with the implementation of the necessary algorithms and operations. 
 
-## Techniques used for optimization of the kernel
+## Techniques used for optimization of the Mag2 kernel
 
 * Shared memory for more efficient utillization of each *block*
 * Grid Stride loop to prevent overflow of the data 
