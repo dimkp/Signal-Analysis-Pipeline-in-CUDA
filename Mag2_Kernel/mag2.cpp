@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cuda_runtime.h>
-#include "radiometer.cuh"
+#include "mag2_call.cuh"
 
 int main()
 {

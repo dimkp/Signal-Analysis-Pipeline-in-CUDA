@@ -1,4 +1,4 @@
-#include "radiometer.cuh"
+#include "mag2_call.cuh"
 #include <cuda_runtime.h>
 
 __global__ void compute_mag2_kernel(const float2* input, float* output, const int N)
