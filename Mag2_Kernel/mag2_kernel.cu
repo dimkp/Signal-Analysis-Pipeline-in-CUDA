@@ -1,7 +1,7 @@
 #include "mag2_call.cuh"
 #include <cuda_runtime.h>
 
-__global__ void compute_mag2_kernel(const float2* input, float* output, const int N)
+__global__ void compute_mag2_kernel(const float2* __restrict__ input, float* __restrict__ output, const int N)
 {
     int index = threadIdx.x + blockIdx.x * blockDim.x;
     int stride = gridDim.x * blockDim.x;
