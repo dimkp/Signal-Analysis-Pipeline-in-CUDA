@@ -4,8 +4,10 @@
 __global__ void compute_mag2_kernel(const float2* input, float* output, const int N)
 {
     int index = threadIdx.x + blockIdx.x * blockDim.x;
-    if (index < N)
-        output[index] = input[index].x * input[index].x + input[index].y * input[index].y; 
+    int stride = gridDim.x * blockDim.x;
+    for (int i = index; i < N; i += stride)
+        output[i] = input[i].x * input[i].x + input[i].y * input[i].y; 
+    
 }
 
 void compute_mag2(float2* host_input, float* host_output, int N)
