@@ -5,10 +5,8 @@
 int main()
 {
     const int N = 5;
-
     float2 input[N];
     float output[N] = { 0 };
-
     input[0] = { 1.0f, 2.0f };
     input[1] = { 2.0f, 3.0f };
     input[2] = { 3.0f, 4.0f };
